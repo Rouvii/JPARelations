@@ -3,6 +3,7 @@ package org.example;
 
 
 import jakarta.persistence.EntityManagerFactory;
+import org.example.persistence.entities.Fee;
 import org.example.persistence.entities.Person;
 import org.example.persistence.entities.PersonDetail;
 import org.hibernate.SessionFactory;
@@ -42,6 +43,7 @@ public class HibernateConfig {
     private static void getAnnotationConfiguration(Configuration configuration) {
         configuration.addAnnotatedClass(Person.class);
         configuration.addAnnotatedClass(PersonDetail.class);
+        configuration.addAnnotatedClass(Fee.class);
     }
 
     private static EntityManagerFactory createEMF(boolean forTest) {
